@@ -1,0 +1,82 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  background: #000;
+  font-family: "Poppins", sans-serif;
+}
+
+.container {
+  height: 100vh;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.video {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(255, 182, 193, 0.35),
+    rgba(216, 191, 216, 0.25),
+    rgba(0, 0, 0, 0.25)
+  );
+}
+
+.grain {
+  position: absolute;
+  inset: 0;
+  background-image: url("https://grainy-gradients.vercel.app/noise.svg");
+  opacity: 0.12;
+}
+
+.text {
+  position: absolute;
+  bottom: 120px;
+  left: 24px;
+  color: white;
+}
+
+.text h1 {
+  font-size: 44px;
+}
+
+.text p {
+  font-size: 15px;
+  opacity: 0.85;
+}
+
+.music-btn {
+  position: absolute;
+  top: 22px;
+  left: 22px;
+  height: 42px;
+  width: 42px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(255,255,255,0.25);
+  color: white;
+  cursor: pointer;
+}
+
+.hearts {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  50% { transform: translateY(-8px); }
+    }
